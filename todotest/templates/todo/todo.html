@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{title}}</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href={% static 'todo/to.css' %}>
+</head>
+
+<body>
+
+  <div id="Menu">
+    
+
+    <div id="M_1">  
+    <div>
+      <h4>Status</h4>
+      <form method="POST" action="">
+        {% csrf_token %}
+        <div class="formgroup">
+          {{form}}
+          <input class="btn btn-dark btn-block" type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+    </div>
+
+    <div id="M_1">
+      <div>
+        <h4>In Progress</h4>
+        <p>{{isinprogress}}</p>
+      </div> 
+    </div>
+
+    <div id="M_1">
+        <div>
+          <h4>Done</h4>
+          <p>{{isdone}}</p> 
+        </div>  
+    </div> 
+
+    <div id="M_1">
+          <div>
+            <h3>Complete</h3>
+            <p>{{iscomplete}}</p>
+          </div>
+     </div>
+
+
+    </div>
+  </div>
+
+  <script src="" async defer></script>
+</body>
+
+</html>
